@@ -30,3 +30,19 @@ Submissions will be evaluated holistically and based on a combination of effort,
 
 Regardless if you can or cannot answer the question, provide a short explanation of how you got your solution or how you think it can be solved in your README.md file. However, we highly recommend giving the challenge a try, you just might learn something new!
 
+## Solution
+
+In order to solve this problem, we will need to use Machine learning as well as an imported library to distinguish the words as positive or negative. The way this code will work is that it will search through the text looking for words with a positive meaning or negative meaning. Then the ratio of positive and negative sentiments will be determined. In the end, based on the data collected, the program will be able to calculate whether the main emotion in the text is positive or negative. 
+
+At first, I tried using java (as I have the most knowledge of it) to solve this problem. I would use the Stanford NLP library to assist me with building this program, however, the issue is that it will be completed to use that library; therefore, I will use python instead. I do not have as much knowledge of python as I do java so this program may have some gaps in it.
+
+I use the following playlist to make this program: https://www.youtube.com/watch?v=dyN_WtjdfpA&list=PLhTjy8cBISEoOtB5_nwykvB9wfEDscuEo
+
+https://github.com/attreyabhatt/Sentiment-Analysis/blob/master/main.py
+
+Method one (without the use of the NLTK library):
+The very first thing to do is to save the text as a total string, set the entire text to lowercase, remove the punctuation, and then tokenize the words (or separate the sentences into words). We will use the imported string library to help us do that. From there we remove the words with no meaning aka the stop words. After removing the stop words, we use the remaining words and see if they match up with any words found with the words in the emotions.txt file. If there is a match, the emotion that is associated with that word is added to the emotions_list and after the loop is completed the counter tallies the emotions and prints the results. From there one could create a graph, or use a mathematical representation to get the emotion ratio. 
+
+Method two:
+A much simpler method is possible through the use of the NLTK library. The first few steps are the same. We have to set it to lowercase and remove the strings with the help of the imported string library. Then comes in the NLTK library. After downloading and importing the libraries, I added a function called SentimentAnalysis. This function takes the cleaned text as a parameter, and scans through it, and determines the sentiment ratio. In the end, the function will print the ratio of negative, neutral, and positive sentiment and will also print the more apparent sentiment after comparing the ratios. It will print positive if the positive ratio is larger. If the negative sentiment ratio is larger, negative sentiment will be printed. If they are equal or there is some other scenario then a neutral sentiment is printed.
+
