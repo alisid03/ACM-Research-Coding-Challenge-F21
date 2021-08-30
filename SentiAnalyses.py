@@ -15,12 +15,7 @@ text = open('input.txt').read()
 #changes all letters in the text to lowercase(to ensure that the words we are comparing are all the same case)
 lower_case = text.lower()
 
-"""Remove punctuations
-
-#the .translate helps translate the string into a string with no punctuation
-str 1 strings that need to be replaced
-str 2 is the string that replaces the one mentioned in str 1
-str 3 is the strings that are deleted aka the punctuation"""
+"""Remove punctuations"""
 cleaned_text = lower_case.translate(str.maketrans('','',string.punctuation))
 
 #This function uses the sentiment analyzer to determine the sentiment score of the text and outputs the result
